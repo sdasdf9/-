@@ -1,5 +1,0 @@
-{"timestamp": "2023-10-01T10:00:00", "level": "INFO", "message": "Нагрев начат"}
-{"timestamp": "2023-10-01T10:05:00", "level": "INFO", "message": "Температура в норме"}
-{"timestamp": "2023-10-01T10:06:00", "level": "WARNING", "message": "Давление скачет"}
-{"timestamp": "2023-10-01T10:10:00", "level": "ERROR", "message": "Сбой датчика"}
-{"timestamp": "2023-10-01T10:11:00", "level": "INFO", "message": "Перезапуск"}

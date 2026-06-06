@@ -1,0 +1,12 @@
+
+   Destination: google.com
+
+Ping Source           Address                   Latency BufferSize Status
+                                                   (ms)        (B)
+---- ------           -------                   ------- ---------- ------
+   1 Pro_Cursus       64.233.162.138                 36         32 Success
+   2 Pro_Cursus       64.233.162.138                 29         32 Success
+   3 Pro_Cursus       64.233.162.138                 35         32 Success
+   4 Pro_Cursus       64.233.162.138                 31         32 Success
+   5 Pro_Cursus       64.233.162.138                157         32 Success
+

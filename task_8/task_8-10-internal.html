@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Задание 2: Internal-стили</title>
+    <style>
+        /* Перенос стилей в тег <style> через селекторы тегов */
+        body {
+            background: #f7fafc;
+            font-family: 'Segoe UI', Arial, sans-serif;
+            padding: 20px;
+        }
+        h1 {
+            color: #2c3e50;
+            text-align: center;
+            font-size: 28px;
+        }
+        p {
+            color: #2d3748;
+            font-size: 16px;
+            margin: 15px 0;
+            line-height: 1.6;
+        }
+        ul {
+            background: #edf2f7;
+            padding: 20px;
+            border-radius: 5px;
+            list-style-type: square;
+        }
+        li {
+            font-size: 15px;
+            margin-bottom: 8px;
+            color: #4a5568;
+        }
+        /* Новое правило псевдокласса, недоступное для inline-стилей */
+        a {
+            color: #3182ce;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.1rem;
+        }
+        a:hover {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Заголовок страницы (Internal)</h1>
+
+    <p>Первый абзац текста. Теперь все стили вынесены в тег &lt;style&gt; внутри секции &lt;head&gt;. Код разметки стал чистым и легко читаемым.</p>
+    
+    <p>Второй абзац текста. Использование селекторов по имени тега позволяет применить одинаковые правила оформления ко всем абзацам сразу, избегая дублирования.</p>
+    
+    <p>Третий абзац текста. Ниже добавлена ссылка для проверки интерактивного правила наведения мыши (:hover), которое невозможно реализовать через атрибут style.</p>
+
+    <p>
+        <a href="#">Наведите на меня курсор мыши, чтобы проверить смену цвета</a>
+    </p>
+
+    <ul>
+        <li>Первый пункт списка, стилизованный через тег</li>
+        <li>Второй пункт списка, стилизованный через тег</li>
+        <li>Третий пункт списка, стилизованный через тег</li>
+    </ul>
+
+</body>
+</html>

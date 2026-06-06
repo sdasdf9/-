@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Панель задач с приоритетами</title>
+    <style>
+        /* Базовые стили для окружения */
+        body {
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            background-color: #f4f6f9;
+            color: #333333;
+            margin: 0;
+            padding: 40px 20px;
+        }
+        .container {
+            max-width: 750px;
+            margin: 0 auto;
+        }
+        h2 {
+            color: #2c3e50;
+            margin-bottom: 24px;
+            font-weight: 600;
+        }
+
+        /* 1. Общий стиль карточки */
+        .card {
+            background-color: #ffffff;
+            border: 1px solid #e2e8f0;
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 16px;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+            position: relative;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        /* 2. Красная левая полоса для высокого приоритета */
+        .priority-high {
+            border-left: 6px solid #e53e3e;
+        }
+
+        /* 3. Оранжевая левая полоса для среднего приоритета */
+        .priority-medium {
+            border-left: 6px solid #ed8936;
+        }
+
+        /* 4. Зелёная левая полоса для низкого приоритета */
+        .priority-low {
+            border-left: 6px solid #38a169;
+        }
+
+        /* 5. Особый стиль для выделенной карточки (избранное) */
+        .featured {
+            background-color: #fffaf0; /* Лёгкий тёплый оттенок фона */
+            box-shadow: 0 10px 20px rgba(237, 137, 54, 0.08), 0 4px 6px rgba(0, 0, 0, 0.04); /* Красивая мягкая тень */
+            border-color: #fbd38d;
+            transform: translateY(-2px); /* Небольшое визуальное приподнятие */
+        }
+
+        /* Стили для внутреннего содержимого */
+        .card h3 {
+            margin: 0 0 10px 0;
+            font-size: 1.25rem;
+            color: #1a202c;
+        }
+        .card p {
+            margin: 0;
+            color: #4a5568;
+            font-size: 0.95rem;
+            line-height: 1.5;
+        }
+        
+        /* Вспомогательные бейджи для наглядности */
+        .badge {
+            display: inline-block;
+            font-size: 0.75rem;
+            font-weight: bold;
+            padding: 2px 8px;
+            border-radius: 4px;
+            text-transform: uppercase;
+            margin-bottom: 10px;
+        }
+        .priority-high .badge { background-color: #fed7d7; color: #9b2c2c; }
+        .priority-medium .badge { background-color: #feebc8; color: #9c4221; }
+        .priority-low .badge { background-color: #c6f6d5; color: #22543d; }
+        
+        .featured-label {
+            float: right;
+            background-color: #feebc8;
+            color: #c05621;
+            font-size: 0.75rem;
+            font-weight: bold;
+            padding: 2px 8px;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h2>Менеджер задач / Проекты</h2>
+
+        <!-- Высокий приоритет (Две карточки, первая также является Featured) -->
+        <div class="card priority-high featured">
+            <span class="featured-label">⭐ В фокусе</span>
+            <span class="badge">Высокий приоритет</span>
+            <h3>Подготовка к экзамену по биоорганической химии</h3>
+            <p>Необходимо детально разобрать экзаменационные задачи, повторить структурные формулы и механизмы ключевых химических реакций для аминокислот и желчных кислот.</p>
+        </div>
+
+        <div class="card priority-high">
+            <span class="badge">Высокий приоритет</span>
+            <h3>Исследовательский проект: Цифровой рубль</h3>
+            <p>Проверить структуру и нормативную базу для курсового проекта. Убедиться в соблюдении требований к общему объёму работы (не менее 35 страниц контента).</p>
+        </div>
+
+        <!-- Средний приоритет (Две карточки) -->
+        <div class="card priority-medium">
+            <span class="badge">Средний приоритет</span>
+            <h3>Анализ логов и автоматизация базы данных</h3>
+            <p>Разработать скрипт на Python с использованием библиотеки Pandas для обработки текстовых логов и настроить корректное подключение к PostgreSQL через DBeaver.</p>
+        </div>
+
+        <div class="card priority-medium">
+            <span class="badge">Средний приоритет</span>
+            <h3>Экономический практикум: ООО «Стимул»</h3>
+            <p>Выполнить расчётную часть задания по учёту затрат на производство спецодежды в соответствии с учётной политикой предприятия.</p>
+        </div>
+
+        <!-- Низкий приоритет (Две карточки) -->
+        <div class="card priority-low">
+            <span class="badge">Низкий приоритет</span>
+            <h3>Профессиональная лексика: Quality Management</h3>
+            <p>Повторить терминологический глоссарий, зафиксировать основные стандарты качества и выполнить упражнения из учебного академического юнита.</p>
+        </div>
+
+        <div class="card priority-low">
+            <span class="badge">Низкий приоритет</span>
+            <h3>Сбор референсов для презентации</h3>
+            <p>Использовать нейросети для генерации концептуальных изображений и персонажей к предстоящему докладу по дипломатической истории 20-го века.</p>
+        </div>
+
+    </div>
+
+</body>
+</html>

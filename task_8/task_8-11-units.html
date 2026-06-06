@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Задание 2: Эксперимент с единицами измерения</title>
+    <style>
+        /* Эксперимент: Раскомментируйте или измените это свойство для проверки em/rem */
+        html {
+            font-size: 16px; 
+        }
+
+        body {
+            font-family: sans-serif;
+            background-color: #f0f2f5;
+            padding: 20px;
+        }
+
+        /* Общий стиль для всех блоков */
+        .box {
+            background-color: #fafaf7;
+            border: 1px solid #4caf50;
+            padding: 12px;
+            margin-bottom: 10px;
+            box-sizing: border-box; /* Чтобы padding не увеличивал физическую ширину */
+        }
+
+        /* Различные единицы измерения ширины */
+        .size-px {
+            width: 200px;
+        }
+
+        .size-em {
+            width: 15em;
+        }
+
+        .size-rem {
+            width: 12rem;
+        }
+
+        .size-percent {
+            width: 50%;
+        }
+
+        .size-vw {
+            width: 30vw;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Эксперимент с единицами измерения (CSS Units)</h1>
+    <p>Попробуйте изменить ширину окна браузера или поменять <code>font-size</code> в селекторе <code>html</code> внутри тега <code>&lt;style&gt;</code>.</p>
+
+    <div class="box size-px">Блок 1 (200px)</div>
+    <div class="box size-em">Блок 2 (15em)</div>
+    <div class="box size-rem">Блок 3 (12rem)</div>
+    <div class="box size-percent">Блок 4 (50%)</div>
+    <div class="box size-vw">Блок 5 (30vw)</div>
+
+</body>
+</html>

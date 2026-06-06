@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Задание 3: Карточка товара</title>
+    <style>
+        /* Однострочный комментарий: Стилизация корневого окружения */
+        body {
+            background-color: #f5f5f5;
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; /* Несколько шрифтов через запятую */
+            padding: 40px 20px 40px 20px; /* Шорткат padding с 4 значениями (вверх, право, низ, лево) */
+        }
+
+        /* Комментарий по классу */
+        .card {
+            background-color: #ffffff; /* Цвет в формате HEX */
+            max-width: 350px;
+            margin: 0 auto;
+        }
+
+        /* Групповой селектор через запятую */
+        h1, h2, h3 {
+            color: #2c3e50;
+            margin-top: 0;
+        }
+
+        /* Мульти-классовый селектор: два класса на одном элементе */
+        .card.product {
+            border: 2px solid #e2e8f0; /* Шорткат border */
+            border-radius: 8px;
+            padding: 24px;
+        }
+
+        .description {
+            font-size: 14px;
+            color: #64748b;
+            line-height: 1.5; /* Число без единицы измерения */
+        }
+
+        .price {
+            font-size: 24px;
+            font-weight: bold;
+            color: #0f172a;
+            margin: 15px 0;
+        }
+
+        /* Многострочный комментарий:
+           Стилизация интерактивной кнопки покупки
+        */
+        .btn.btn-primary {
+            background-color: #2563eb;
+            color: #ffffff;
+            border: none; /* Шорткат border */
+            padding: 10px 20px 10px 20px; /* Шорткат padding */
+            border-radius: 6px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            width: 100%;
+        }
+
+        .btn.btn-primary:hover {
+            background-color: #1d4ed8; /* Комментарий в конце строки */
+        }
+    </style>
+</head>
+<body>
+
+    <div class="card product">
+        <h2>Название товара</h2>
+        <p class="description">Универсальное решение для повседневных задач. Высокое качество исполнения, эргономичный дизайн и надежные материалы сборки.</p>
+        <p class="price">1500 ₽</p>
+        <button class="btn btn-primary">Купить</button>
+    </div>
+
+</body>
+</html>

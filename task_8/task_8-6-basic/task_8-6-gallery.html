@@ -1,0 +1,166 @@
+
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Фотогалерея «Мой день»</title>
+    <style>
+        *, *::before, *::after {
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            background-color: #fafbfc;
+            color: #2c3e50;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        header {
+            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+            color: white;
+            width: 100%;
+            text-align: center;
+            padding: 2.5rem 1rem;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            margin-bottom: 3rem;
+        }
+        h1 {
+            margin: 0;
+            font-size: 2.2rem;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+        }
+        .subtitle {
+            margin-top: 0.5rem;
+            font-size: 1rem;
+            opacity: 0.9;
+        }
+        .gallery-container {
+            max-width: 750px;
+            width: 100%;
+            padding: 0 20px;
+        }
+        figure {
+            background: #ffffff;
+            margin: 0 0 4rem 0;
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+            border: 1px solid #eef2f5;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        figure:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+        }
+        img {
+            width: 100%;
+            height: auto;
+            max-height: 500px;
+            display: block;
+            border-radius: 6px;
+            object-fit: cover;
+            background-color: #eaedf1;
+            /* Задаем минимальную высоту, чтобы элементы занимали место до загрузки картинок */
+            min-height: 450px; 
+        }
+        figcaption {
+            margin-top: 16px;
+            font-size: 1.1rem;
+            color: #4a5568;
+            text-align: center;
+            font-weight: 500;
+            line-height: 1.5;
+        }
+        a {
+            text-decoration: none;
+            display: block;
+            outline: none;
+        }
+        a:focus img, figure:hover img {
+            filter: brightness(0.95);
+        }
+        .link-hint {
+            display: block;
+            font-size: 0.85rem;
+            color: #3182ce;
+            margin-top: 6px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        footer {
+            margin-top: auto;
+            padding: 2rem 0;
+            color: #a0aec0;
+            font-size: 0.9rem;
+            text-align: center;
+            width: 100%;
+            border-top: 1px solid #e2e8f0;
+            background-color: #ffffff;
+        }
+        .instructions {
+            background-color: #ebf8ff;
+            border-left: 4px solid #3182ce;
+            color: #2b6cb0;
+            padding: 15px;
+            margin-bottom: 2.5rem;
+            border-radius: 0 8px 8px 0;
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+    </style>
+</head>
+<body>
+
+        <!-- 1. Утро / Завтрак (Вводная - загружается сразу) -->
+        <figure>
+            <img src="https://images.unsplash.com/photo-1506084868230-bb9d95c24759?auto=format&fit=crop&w=800&q=80" alt="Утренний кофе и завтрак" loading="eager">
+            <figcaption>1. Начало дня: бодрящий утренний кофе и сбалансированный завтрак.</figcaption>
+        </figure>
+
+        <!-- 2. Путь / Продуктивная сессия (Отложенная загрузка) -->
+        <figure>
+            <img src="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&w=800&q=80" alt="Учеба и работа за компьютером" loading="lazy">
+            <figcaption>2. Время для учебы и фокусной работы над проектами.</figcaption>
+        </figure>
+
+        <!-- 3. Обед / Перерыв (Отложенная загрузка) -->
+        <figure>
+            <img src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?auto=format&fit=crop&w=800&q=80" alt="Полезный обед" loading="lazy">
+            <figcaption>3. Перерыв на обед, чтобы восстановить силы и перезагрузиться.</figcaption>
+        </figure>
+
+        <!-- 4. Прогулка / Свежий воздух (Отложенная загрузка) -->
+        <figure>
+            <img src="https://images.unsplash.com/photo-1502082553048-f009c37129b9?auto=format&fit=crop&w=800&q=80" alt="Прогулка в парке" loading="lazy">
+            <figcaption>4. Небольшая дневная прогулка на свежем воздухе среди деревьев.</figcaption>
+        </figure>
+
+        <!-- 5. Хобби и чтение (Картинка-ссылка, ведущая на полный размер) -->
+        <figure>
+            <a href="https://images.unsplash.com/photo-1516979187457-637abb4f9353?auto=format&fit=crop&w=1600&q=90" target="_blank" title="Открыть оригинал в новой вкладке">
+                <img src="https://images.unsplash.com/photo-1516979187457-637abb4f9353?auto=format&fit=crop&w=800&q=80" alt="Книги и вечернее чтение" loading="lazy">
+            </a>
+            <figcaption>
+                5. Вечернее время для чтения профессиональной литературы и саморазвития.
+                <span class="link-hint">📎 Нажмите на фото, чтобы открыть оригинал</span>
+            </figcaption>
+        </figure>
+
+        <!-- 6. Вечерний отдых / Подготовка ко сну (Отложенная загрузка) -->
+        <figure>
+            <img src="https://vkplay.ru/hotbox/content_files/article/2017/7/8ace5b7.jpeg" alt="Уютная атмосфера перед сном" loading="lazy">
+            <figcaption>6. Завершение дня: пару игр в доту.</figcaption>
+        </figure>
+
+    </main>
+
+  
+
+</body>
+</html>

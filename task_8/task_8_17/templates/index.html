@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Дашборд Студентов | test_db</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<header>
+    <h1>
+        PricePoint Analytics
+    </h1>
+    <p>Мониторинг товарных цен и аналитическая панель</p>
+</header>
+<div class="layout">
+    <aside class="controls">
+    <h2>Статистика</h2>
+    <button class="action-btn" data-action="metric" data-path="mean">Средняя цена</button>
+    <button class="action-btn" data-action="metric" data-path="median">Медиана</button>
+    <button class="action-btn" data-action="metric" data-path="total">Кол-во товаров</button>
+    <button class="action-btn" data-action="metric" data-path="max">Макс. цена</button>
+
+    <h2>Графики</h2>
+    <button class="action-btn" data-action="chart" data-path="histogram">Гистограмма</button>
+    <button class="action-btn" data-action="chart" data-path="bar">Цены товаров</button>
+    
+    <button class="action-btn clear" id="clear-btn">🗑 Очистить</button>
+</aside>
+
+    <main id="result-area">
+        <p class="placeholder">
+            ← Выберите метрику или график в панели слева
+        </p>
+    </main>
+</div>
+
+<footer>
+    <p>© База данных student_task.</p>
+</footer>
+
+<script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>

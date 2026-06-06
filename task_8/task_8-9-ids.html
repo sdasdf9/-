@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Одностраничный сайт с якорной навигацией</title>
+    <style>
+        /* Общие стили для страницы */
+        html {
+            scroll-behavior: smooth; /* Плавная прокрутка при клике на ссылки */
+        }
+        body {
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+            color: #2d3748;
+        }
+
+        /* Стили для навигационного меню */
+        nav {
+            position: fixed; /* Фиксируем меню вверху экрана при скролле */
+            top: 0;
+            left: 0;
+            width: 100%;
+            background-color: #2c3e50;
+            padding: 15px 0;
+            text-align: center;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            z-index: 1000;
+        }
+        nav a {
+            color: #ffffff;
+            text-decoration: none;
+            margin: 0 20px;
+            font-weight: bold;
+            font-size: 1.1rem;
+            transition: color 0.2s ease;
+        }
+        nav a:hover {
+            color: #3498db;
+        }
+
+        /* Стили для секций, заданные строго по ID */
+        #about {
+            background: #e0eaff; 
+            padding: 20px;
+            margin-top: 55px; /* Отступ сверху, чтобы фиксированное меню не перекрывало заголовок */
+            min-height: 80vh; /* Минимальная высота секции для демонстрации прокрутки */
+        }
+        #projects {
+            background: #e6f4ea; 
+            padding: 20px;
+            min-height: 80vh;
+        }
+        #contacts {
+            background: #fff0f6; 
+            padding: 20px;
+            min-height: 80vh;
+        }
+
+        /* Стили для контента внутри секций */
+        section h2 {
+            font-size: 2rem;
+            margin-top: 40px;
+            border-bottom: 2px solid rgba(0,0,0,0.05);
+            padding-bottom: 10px;
+        }
+        section p {
+            font-size: 1.1rem;
+            max-width: 800px;
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <a href="#about">Обо мне</a>
+        <a href="#projects">Проекты</a>
+        <a href="#contacts">Контакты</a>
+    </nav>
+
+    <section id="about">
+        <h2>Обо мне</h2>
+        <p>Привет! Меня зовут Козетта Кусто. Я интересуюсь анализом данных, программированием на языке Python и проектированием эффективных баз данных с использованием PostgreSQL и интерфейса DBeaver. Помимо технических дисциплин, я нахожу глубокое вдохновение в изучении дипломатической истории двадцатого века, а также в экспериментах с возможностями искусственного интеллекта для генерации визуальных образов.</p>
+    </section>
+
+    <section id="projects">
+        <h2>Проекты</h2>
+        <p>В список моих текущих практических задач входит написание скриптов автоматизации на Python с применением библиотеки Pandas, создание комплексных аналитических SQL-запросов, а также разработка детальной академической структуры для крупных исследовательских работ. Каждая задача для меня — это способ структурировать информацию и найти оптимальное логическое решение.</p>
+    </section>
+
+    <section id="contacts">
+        <h2>Контакты</h2>
+        <p>Если вам интересны мои исследования, проекты в сфере анализа данных или вы хотите обсудить исторические и академические темы, вы можете связаться со мной через учебные профили или электронную почту. В настоящее время я нахожусь в Техасе, США, и всегда рада открытому интеллектуальному диалогу и новым интересным задачам.</p>
+    </section>
+
+</body>
+</html>

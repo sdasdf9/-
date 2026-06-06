@@ -1,0 +1,47 @@
+/* 1. Стили для body */
+body {
+    font-family: 'Segoe UI', Helvetica, Arial, sans-serif;
+    background-color: #f0f4f8;
+    color: #10172a;
+    line-height: 1.6;
+    padding: 40px 20px;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+/* 2. Стили для h1 */
+h1 {
+    color: #1e3a8a;
+    font-size: 2.2rem;
+    border-bottom: 3px solid #3b82f6;
+    padding-bottom: 10px;
+    margin-bottom: 25px;
+}
+
+/* 3. Стили для p */
+p {
+    margin-bottom: 1.2rem;
+    font-size: 1.1rem;
+}
+
+/* 4. Стили для a и a:hover */
+a {
+    color: #2563eb;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.2s ease;
+}
+
+a:hover {
+    color: red;
+    text-decoration: underline;
+}
+
+/* 5. Правило для класса .highlight */
+.highlight {
+    background-color: #fef08a;
+    border-left: 5px solid #eab308;
+    padding: 12px 16px;
+    border-radius: 0 6px 6px 0;
+    color: #713f12;
+}

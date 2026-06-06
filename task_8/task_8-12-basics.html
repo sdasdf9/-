@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Задание 2: Базовые селекторы CSS</title>
+    <style>
+        /* 1. Универсальный селектор */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* 2. Селектор по тегу */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f8fafc;
+            color: #334155;
+            padding: 40px;
+        }
+
+        /* 3. Селектор по ID */
+        #title {
+            color: #1e40af;
+            border-bottom: 2px solid #93c5fd;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+        }
+
+        /* 4. Селектор по классу */
+        .lead {
+            font-size: 1.25rem;
+            color: #475569;
+            line-height: 1.6;
+            margin-bottom: 30px;
+            font-weight: 500;
+        }
+
+        /* 5. Группировка через запятую */
+        h1, h2, h3 {
+            font-family: Georgia, serif;
+            letter-spacing: 0.5px;
+        }
+
+        /* Базовый стиль для блоков */
+        .box {
+            background-color: #ffffff;
+            border: 1px solid #cbd5e1;
+            padding: 20px;
+            margin-bottom: 15px;
+            border-radius: 6px;
+        }
+
+        /* 6. Селектор с двумя классами слитно */
+        .box.highlight {
+            border-color: #eab308;
+            background-color: #fef08a;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+        }
+
+        /* 7. Селектор с тремя классами слитно */
+        .box.highlight.large {
+            padding: 40px;
+            font-size: 1.5rem;
+            text-align: center;
+            border-width: 3px;
+        }
+        
+        /* Стили для обычного абзаца */
+        p:not(.lead) {
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1 id="title">Практика базовых селекторов</h1>
+
+    <p class="lead">Этот абзац имеет класс .lead. Он используется для вступительного текста и оформлен крупнее обычного, чтобы привлечь внимание читателя.</p>
+    
+    <p>Это стандартный абзац без классов. К нему применяются только общие стили документа и сброс отступов универсальным селектором.</p>
+
+    <!-- Блоки для проверки мультиклассовости -->
+    <div class="box">
+        Простой блок с одним классом <code>.box</code>
+    </div>
+
+    <div class="box highlight">
+        Блок с двумя классами <code>.box.highlight</code>
+    </div>
+
+    <div class="box highlight large">
+        Блок с тремя классами <code>.box.highlight.large</code>
+    </div>
+
+</body>
+</html>
